@@ -1,0 +1,18 @@
+<?php
+
+// set your database settings here:
+
+$rawDbConfig = [
+    // set the database host and database name
+    'pdoUrl'			=> 'mysql:host=localhost;dbname=dbname1',
+    // use this username to create the database login
+    'dbUser'			=> 'root',
+    // use this password to create the database login
+    'dbPassword'		=> 'root',
+    
+    // the user database table and the username and password columns
+    'table'				=> 'users',
+    'usernameColumn'	=> 'name',
+    'passwordColumn'	=> 'password',
+];
+?>

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<dataset>
+    <table name="users">
+        <column>name</column>
+        <column>password</column>
+        <row>
+            <value>sb</value>
+            <value>$1$rasmusl1$2ASuKCrDVFQspP8.yIzVl.</value>
+        </row>
+    </table>
+</dataset>

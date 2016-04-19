@@ -1,0 +1,11 @@
+{
+  "require-dev": {
+    "phpunit/phpunit": "5.3.*",
+    "phpunit/dbunit": ">=1.2"
+  },
+  "autoload": {
+    "classmap": [
+      "src/main/webapp/Om/Pdo/Authenticator/"
+    ]
+  }
+}
