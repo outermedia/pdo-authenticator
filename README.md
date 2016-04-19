@@ -59,7 +59,7 @@ cp -r vendor/outermedia/pdo-authenticator/src/main/webapp/* $DEST
 
 Rename the file dbconf.php.template:
 ```
-mv $DEST/dbconf.php.template dbconf.php
+mv $DEST/dbconf.php.template $DEST/dbconf.php
 ```
 
 ### Step 4: Set your database options
