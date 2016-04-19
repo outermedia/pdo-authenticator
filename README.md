@@ -41,6 +41,13 @@ This creates files in your current working directory:
 
 ```
 
+Hint: If you want to run the phpunit tests, additionally run (creates new directoy pdo-authenticator/):
+```
+php ~/php/composer.phar --prefer-source create-project outermedia/pdo-authenticator
+pushd pdo-authenticator && vendor/bin/phpunit src/test/php/ && popd
+```
+Note: The dbunit tests require sqlite3.
+
 ###Step 2: Deploy the files
 
 Now copy the files to your destination directory ($DEST)
