@@ -7,11 +7,12 @@ At first install or download composer.phar to your computer. Follow the instruct
 
 ### Step 1: Download the project
 
-To download the latest distribution without tests, run
+Create an intermediate directory, cd into it and download the latest distribution without tests:
 
 ``` bash
 php ~/php/composer.phar --prefer-dist require outermedia/pdo-authenticator
 ```
+
 This creates files in your current working directory:
 
 ```
@@ -71,6 +72,25 @@ Options are:
 
 Two POST actions are supported:
 
+a) Get a user's salt ("user1"): Encode your form parameters with the specified charset!
 ```
-http://<host>/<path to your installation>/index.html
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" \
+    --data 'action=getsalt&login=user1' http://localhost/pdo-auth/index.php
 ```
+should return something like:
+```
+{"charset":"latin1","result":true,"salt":"$1$rasmusl1"}
+```
+The charset used by the database table, the salt and a success flag ("result").
+
+b) Check a user's login: pwd is the calculated hash.
+```
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" \
+    --data 'action=login&login=user1&pwd=$1$rasmusl1$2ASuKCrDVFQspP8.yIzVl.' \
+    http://localhost/pdo-auth/index.php
+```
+The expected answer is e.g.
+```
+{"charset":"latin1","result":true}
+```
+The flag "result" indicates the success.
