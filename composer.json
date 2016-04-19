@@ -1,4 +1,23 @@
 {
+  "name": "outermedia/pdo-authenticator",
+  "type": "project",
+  "description": "Generic PDO-Authentication",
+  "keywords": ["authentication","login"],
+  "homepage": "http://www.outermedia.de",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Siegfried Ballmann",
+      "email": "sba@outermedia.de",
+      "homepage": "http://www.outermedia.de",
+      "role": "Developer"
+    }
+  ],
+  
+  "require": {
+    "php": ">=5.5.9"
+  },
+  
   "require-dev": {
     "phpunit/phpunit": "5.3.*",
     "phpunit/dbunit": ">=1.2"
